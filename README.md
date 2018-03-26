@@ -1,2 +1,2 @@
-# mainflux-k8s
+# mainflux-k8s - WIP
 setup mainflux on k8s
