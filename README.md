@@ -1,5 +1,5 @@
-# Setup Mainflux on Kubernetes - WIP
-Scripts to deploy Mainflux on the kubernetes. Work in progress. Not ready for deployment.
+# Deploy Mainflux on Kubernetes - WIP
+Scripts to deploy Mainflux on Kubernetes (https://kubernetes.io). Work in progress. Not ready for deployment.
 
 ## Steps
 
@@ -48,4 +48,8 @@ kubectl create -f 3-mainflux-mqtt.yml
 - Create CoAP Service
 ```bash
 kubectl create -f 4-mainflux-coap.yml
+```
+- Create Normalizer Service
+```bash
+kubectl create -f 5-mainflux-normalizer.yml
 ```
