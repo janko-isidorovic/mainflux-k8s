@@ -3,7 +3,7 @@ Scripts to deploy Mainflux on the kubernetes. Work in progress. Not ready for de
 
 ## Steps
 
-1. Setup PosgreSQL 
+### 1. Setup PosgreSQL 
 - Create Persistent Volume for PosgreSQL to store data to.
 ```bash 
 kubectl create -f 1-mainflux-postgres-persistence.yml
@@ -21,7 +21,7 @@ kubectl create -f 3-mainflux-postgres-pod.yml
 kubectl create -f 4-mainflux-postgres-service.yml
 ```
 
-2. Setup NATS
+### 2. Setup NATS
 - Change `nats.conf` according to your needs.
 Create a Kubernetes configmap to store it:
 ```bash
@@ -32,7 +32,7 @@ kubectl create configmap nats-config --from-file nats.conf
 kubectl create -f nats.yml
 ```
 
-3. Setup Mainflux Services
+### 3. Setup Mainflux Services
 - Create Manager Service
 ```bash
 kubectl create -f 1-mainflux-manager.yml
