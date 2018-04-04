@@ -49,3 +49,7 @@ kubectl create -f 3-mainflux-mqtt.yml
 ```bash
 kubectl create -f 4-mainflux-coap.yml
 ```
+- Create Normalizer Service
+```bash
+kubectl create -f 5-mainflux-normalizer.yml
+```
