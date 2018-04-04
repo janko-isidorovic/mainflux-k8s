@@ -1,5 +1,5 @@
-# Setup Mainflux on Kubernetes - WIP
-Scripts to deploy Mainflux on the kubernetes. Work in progress. Not ready for deployment.
+# Deploy Mainflux on Kubernetes - WIP
+Scripts to deploy Mainflux on Kubernetes (https://kubernetes.io). Work in progress. Not ready for deployment.
 
 ## Steps
 
