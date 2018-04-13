@@ -3,10 +3,11 @@ kind: Service
 metadata:
   name: dashflux-svc
 spec:
+  type: LoadBalancer
+  selector:
+    app: dashflux
+    role: frontend
   ports:
      -  port: 80
         protocol: TCP
-        targetPort: 80
-  selector:
-    app: dashflux
-  type: NodePort
+        targetPort: 8080
