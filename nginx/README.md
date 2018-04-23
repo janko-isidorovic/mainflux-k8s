@@ -1,11 +1,11 @@
-###NGINX as Reverse Proxy for Mainflux services
+# NGINX as Reverse Proxy for Mainflux services
 
-##1. Create TLS Secrets
-
-
-
-##2. Create Config Map
+## 1. Create TLS Secrets
 
 
 
-##3. Create Nginx Deployment
+## 2. Create Config Map
+
+
+
+## 3. Create Nginx Deployment
