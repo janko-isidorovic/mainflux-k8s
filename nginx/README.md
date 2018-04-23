@@ -14,8 +14,8 @@ cd ..
 kubectl create configmap mainflux-nginx-config --from-file=default.conf
 ```
 
-### 3. Create Nginx Deployment
-- Create Deployment from mainflux-dashflux.yaml file.
+### 3. Create Nginx Deployment and Service
+- Create Deployment and Service from mainflux-dashflux.yaml file.
 ```bash 
 kubectl create -f mainflux-nginx.yaml
 ```
