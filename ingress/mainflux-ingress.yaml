@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: mainflux-ingress
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /api/
+        backend:
+          serviceName: manager
+          servicePort: 8180
+      - path: /http/
+        backend:
+          serviceName: http-adapter
+          servicePort: 8182
