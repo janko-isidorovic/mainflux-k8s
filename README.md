@@ -53,3 +53,28 @@ kubectl create -f 4-mainflux-coap.yml
 ```bash
 kubectl create -f 5-mainflux-normalizer.yml
 ```
+
+### 4. Setup Dashflux Services
+- Create Dashflux Deployment and Service
+```bash
+cd dashflux
+kubectl create -f mainflux-dashflux.yaml
+```	
+
+### 5. Setup NginX Reverse Proxy for Mainflux Services
+- Create TLS server side certificate and keys
+```bash 
+cd certs
+kubectl create secret tls mainflux-secret --key mainflux-server.key --cert mainflux-server.crt
+```
+- Create Config Map based on the default.conf file. 
+```bash 
+cd ..
+kubectl create configmap mainflux-nginx-config --from-file=default.conf
+```
+- Create Deployment and Service from mainflux-dashflux.yaml file.
+```bash 
+kubectl create -f mainflux-nginx.yaml
+
+### 6. Configure Internet Access
+Configure NAT on your Firewall to forward ports 80 (HTTP) and 443 (HTTPS) to mainflux-nginx service
