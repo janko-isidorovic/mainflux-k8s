@@ -75,6 +75,7 @@ kubectl create configmap mainflux-nginx-config --from-file=default.conf
 - Create Deployment and Service from mainflux-dashflux.yaml file.
 ```bash 
 kubectl create -f mainflux-nginx.yaml
+```
 
 ### 6. Configure Internet Access
 Configure NAT on your Firewall to forward ports 80 (HTTP) and 443 (HTTPS) to mainflux-nginx service
